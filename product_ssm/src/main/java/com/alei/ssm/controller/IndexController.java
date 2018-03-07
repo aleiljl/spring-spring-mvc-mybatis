@@ -20,10 +20,7 @@ public class IndexController {
     private static transient Logger logger = Logger.getLogger(IndexController.class);
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request, Model model){
-        int userId = Integer.parseInt(request.getParameter("id"));
-        SysUser user = sysUserService.selectByPrimaryKey(userId);
-        model.addAttribute("user", user);
+    public String index(){
         return "index";
     }
 

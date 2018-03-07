@@ -19,6 +19,12 @@
     from sys_user
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="loginAction" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_user
+    where login_name = #{loginName,jdbcType=VARCHAR} AND password = #{password,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sys_user
     where id = #{id,jdbcType=INTEGER}

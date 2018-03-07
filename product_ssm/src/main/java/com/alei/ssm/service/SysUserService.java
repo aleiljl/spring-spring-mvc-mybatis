@@ -15,4 +15,6 @@ public interface SysUserService {
     int updateByPrimaryKeySelective(SysUser record);
 
     int updateByPrimaryKey(SysUser record);
+
+    SysUser loginAction(String loginName, String password);
 }

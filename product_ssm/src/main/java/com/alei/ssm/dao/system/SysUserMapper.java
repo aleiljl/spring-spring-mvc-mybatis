@@ -1,7 +1,10 @@
 package com.alei.ssm.dao.system;
 
 import com.alei.ssm.entity.system.SysUser;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SysUserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +17,6 @@ public interface SysUserMapper {
     int updateByPrimaryKeySelective(SysUser record);
 
     int updateByPrimaryKey(SysUser record);
+
+    SysUser loginAction(@Param("loginName") String loginName, @Param("password") String password);
 }

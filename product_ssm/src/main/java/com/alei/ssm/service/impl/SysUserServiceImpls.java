@@ -4,15 +4,14 @@ import com.alei.ssm.dao.system.SysUserMapper;
 import com.alei.ssm.entity.system.SysUser;
 import com.alei.ssm.service.SysUserService;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.Resource;
 
 @Service
 @Transactional
 public class SysUserServiceImpls implements SysUserService {
-    @Resource
+    @Autowired
     private SysUserMapper mapper;
 
     private static transient Logger logger = Logger.getLogger(SysUserServiceImpls.class);
@@ -39,5 +38,9 @@ public class SysUserServiceImpls implements SysUserService {
 
     public int updateByPrimaryKey(SysUser record) {
         return mapper.updateByPrimaryKey(record);
+    }
+
+    public SysUser loginAction(String loginName, String password) {
+        return mapper.loginAction(loginName, password);
     }
 }
