@@ -1,2 +1,2 @@
 # spring-spring-mvc-mybatis
-description is null
+目前仅是搭建了一个ssm框架
