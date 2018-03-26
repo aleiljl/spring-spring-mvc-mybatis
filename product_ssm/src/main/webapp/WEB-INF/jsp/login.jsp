@@ -11,29 +11,7 @@
     <title>A Lei System Login Page</title>
 </head>
 <script src="../js/jquery-3.3.1.min.js"></script>
-<script>
-    $(document).ready(function(){
-        var login_name;
-        var password;
-        $("#login_button").click(function(){
-            login_name = $('#login_name').val();
-            password = $('#password').val();
-            console.log(login_name+"----"+password)
-            $.ajax({
-                url:'loginAction.do',
-                data: {'loginName':login_name,'password':password},
-                success:function (result) {
-                    if (result.success){
-                        $('#success').show().fadeOut(3000);
-                        window.location.href='http://localhost:8080/index/index.do';
-                    }else{
-                        $('#failure').show().fadeOut(3000);
-                    }
-                }
-            })
-        });
-    });
-</script>
+<script src="../js/login_page.js"></script>
 <body>
 <div style="margin-left:auto;margin-top:auto;">
     <div>
@@ -45,11 +23,10 @@
         <input type="text" id="password" align="right"/>
     </div>
     <div>
-        <p id="login_button" >login</p>
+        <input type="button"id="login_button"value="login" />
+        <p id = 'failure' style="display: none; color: red; font-size: 18px">login is failure</p>
     </div>
 </div>
-<p id = 'success' style="display: none">login is failure</p>
-<p id = 'failure' style="display: none">login is success</p>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Under the Bridge | Template created by Dieter Schneider for www.csstemplateheaven.com</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
@@ -13,8 +13,8 @@
 <div id="container">
 
     <div id="header">
-        <h1>Under The Bridge</h1>
-        <h2>By Dieter Schneider</h2>
+        <h1>Lei</h1>
+        <h2>WebSite By Lei ,change be from Dieter Schneider</h2>
     </div>
 
 

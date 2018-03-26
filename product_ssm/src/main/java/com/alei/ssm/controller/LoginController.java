@@ -34,6 +34,13 @@ public class LoginController {
         return "login";
     }
 
+    /**
+     * system login action
+     * @param request
+     * @param loginName
+     * @param password
+     * @return
+     */
     @RequestMapping("/loginAction")
     @ResponseBody
     public BaseResult loginAction(HttpServletRequest request, String loginName, String password){
@@ -41,6 +48,7 @@ public class LoginController {
         Map<String ,Object> map = new HashMap<String, Object>();
         try {
             SysUser sysUser = sysUserService.loginAction(loginName, password);
+
             if (sysUser != null) {
                 baseResult.setSuccess(true);
                 map.put("nickName", sysUser.getNickName());
